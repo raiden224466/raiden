@@ -1,117 +1,268 @@
-<!DOCTYPE html>  
-<html lang="ar" dir="rtl">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>ابدأ رحلتك الآن</title>  
-    <link href="https://googleapis.com" rel="stylesheet">  
-    <style>  
-        * {  
-            box-sizing: border-box;  
-            margin: 0;  
-            padding: 0;  
-            font-family: 'Cairo', sans-serif;  
-        }  
-        body {  
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);  
-            color: #ffffff;  
-            display: flex;  
-            justify-content: center;  
-            align-items: center;  
-            height: 100vh;  
-            padding: 20px;  
-            text-align: center;  
-        }  
-        .container {  
-            background: rgba(255, 255, 255, 0.05);  
-            padding: 40px 30px;  
-            border-radius: 20px;  
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);  
-            backdrop-filter: blur(10px);  
-            border: 1px solid rgba(255, 255, 255, 0.1);  
-            max-width: 450px;  
-            width: 100%;  
-        }  
-        .badge {  
-            background: #ffcc00;  
-            color: #000;  
-            padding: 5px 15px;  
-            border-radius: 50px;  
-            font-size: 14px;  
-            font-weight: bold;  
-            display: inline-block;  
-            margin-bottom: 20px;  
-            animation: pulse 2s infinite;  
-        }  
-        h1 {  
-            font-size: 26px;  
-            margin-bottom: 15px;  
-            color: #fff;  
-        }  
-        p {  
-            font-size: 16px;  
-            color: #b0bec5;  
-            margin-bottom: 30px;  
-            line-height: 1.6;  
-        }  
-        .btn {  
-            display: block;  
-            background: linear-gradient(45deg, #0088cc, #00a8ff);  
-            color: white;  
-            text-decoration: none;  
-            padding: 15px 30px;  
-            border-radius: 50px;  
-            font-size: 18px;  
-            font-weight: bold;  
-            box-shadow: 0 5px 20px rgba(0, 136, 204, 0.4);  
-            transition: all 0.3s ease;  
-        }  
-        .btn:hover {  
-            transform: translateY(-3px);  
-            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.6);  
-        }  
-        .footer-text {  
-            margin-top: 25px;  
-            font-size: 12px;  
-            color: #78909c;  
-        }  
-        @keyframes pulse {  
-            0% { transform: scale(1); }  
-            50% { transform: scale(1.05); }  
-            100% { transform: scale(1); }  
-        }  
-    </style>  
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAIDEN | الدخول إلى البوت الرسمي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090909;
+            --card-dark: #141414;
+            --card-top: #1a1512;
+            --orange-main: #ff5500;
+            --orange-light: #ff7733;
+            --orange-deep: #d94300;
+            --text-white: #ffffff;
+            --text-muted: #b0b0b0;
+            --text-dim: #7c7c7c;
+            --border-subtle: rgba(255, 85, 0, 0.24);
+        }
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2163095064608834');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2163095064608834&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</head>  
-<body>  
-  
-    <div class="container">  
-        <div class="badge">🔥 متصل الآن وجاهز</div>  
-        <h1>انتقل إلى البوت الرسمي فوراً</h1>  
-        <p>اضغط على الزر أدناه لفتح تطبيق تليجرام مباشرة والبدء في تشغيل البوت الخاص بك بدون إعلانات أو فترات انتظار.</p>  
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
 
-        <a href="https://t.me/Raiden_texas_bot?start=8899975959" class="btn" onclick="fbq('track', 'CompleteRegistration');">اضغط هنا لفتح البوت عبر تليجرام 🚀</a>
+        body {
+            background: radial-gradient(circle at 50% 10%, rgba(255, 85, 0, 0.16) 0%, rgba(9, 9, 9, 1) 58%), var(--bg-dark);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
 
-          
-        <div class="footer-text">سيتم تحويلك بشكل آمن ومباشر إلى التطبيق الرسمي.</div>  
-    </div>  
-  
-</body>  
-</html>  
+        .container {
+            background: linear-gradient(180deg, var(--card-top) 0%, var(--card-dark) 100%);
+            padding: 32px 22px;
+            border-radius: 22px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75), 0 0 24px rgba(255, 85, 0, 0.08);
+            border: 1px solid var(--border-subtle);
+            max-width: 430px;
+            width: 100%;
+        }
+
+        .texas-logo {
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-white);
+            margin-bottom: 16px;
+        }
+
+        .texas-logo span {
+            color: var(--orange-main);
+        }
+
+        .raiden-emblem {
+            width: 74px;
+            height: 74px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, var(--orange-light), var(--orange-deep));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            box-shadow: 0 8px 22px rgba(255, 85, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .raiden-emblem svg {
+            width: 38px;
+            height: 38px;
+            fill: #ffffff;
+        }
+
+        .raiden-title {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--text-white);
+            margin-bottom: 8px;
+        }
+
+        .raiden-title span {
+            color: var(--orange-light);
+        }
+
+        .badge {
+            background: rgba(255, 85, 0, 0.14);
+            color: var(--orange-light);
+            border: 1px solid rgba(255, 85, 0, 0.35);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 21px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-white);
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        /* خطوات سريعة ومفيدة */
+        .steps-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            padding: 12px 14px;
+            margin-bottom: 22px;
+            text-align: right;
+            font-size: 13px;
+            color: #dcdcdc;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .step-num {
+            background: rgba(255, 85, 0, 0.2);
+            color: var(--orange-light);
+            font-weight: 800;
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, var(--orange-main), var(--orange-deep));
+            color: var(--text-white);
+            text-decoration: none;
+            padding: 15px 22px;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 800;
+            box-shadow: 0 6px 20px rgba(255, 85, 0, 0.38);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, var(--orange-light), var(--orange-main));
+            transform: translateY(-2px);
+        }
+
+        .copy-helper {
+            margin-top: 12px;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--orange-light);
+            color: var(--text-white);
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2163095064608834');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2163095064608834&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="texas-logo">TEXAS<span>4</span>WIN</div>
+
+        <div class="raiden-emblem" aria-label="شعار RAIDEN">
+            <svg viewBox="0 0 24 24">
+                <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z"/>
+            </svg>
+        </div>
+        <div class="raiden-title">RAI<span>DEN</span></div>
+
+        <div class="badge">متصل الآن وجاهز</div>
+        <h1>انتقل إلى البوت الرسمي فوراً</h1>
+        <p>اضغط على الزر أدناه لفتح تليجرام مباشرة والبدء في تشغيل البوت بدون إعلانات أو تأخير.</p>
+
+        <div class="steps-box">
+            <div class="step-item"><span class="step-num">1</span><span>اضغط على زر فتح البوت بالأسفل</span></div>
+            <div class="step-item"><span class="step-num">2</span><span>اضغط «ابدأ / Start» داخل تليجرام</span></div>
+            <div class="step-item"><span class="step-num">3</span><span>تابع خطواتك بسهولة وفورية</span></div>
+        </div>
+
+        <a id="botLink" href="https://t.me/Raiden_texas_bot?start=8899975959" class="btn" onclick="if (typeof fbq === 'function') { fbq('track', 'CompleteRegistration'); }">
+            اضغط هنا لفتح البوت عبر تليجرام
+        </a>
+
+        <div class="copy-helper">
+            <button type="button" class="copy-btn" onclick="copyBotLink(this)">نسخ رابط البوت</button>
+        </div>
+
+        <div class="footer-text">
+            تحويل آمن ومباشر إلى التطبيق الرسمي.<br>
+            جميع الحقوق محفوظة © RAIDEN 2026
+        </div>
+    </div>
+
+    <script>
+        function copyBotLink(btn) {
+            const url = document.getElementById('botLink').href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const oldText = btn.textContent;
+                    btn.textContent = 'تم نسخ الرابط ✓';
+                    setTimeout(() => btn.textContent = oldText, 2000);
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
